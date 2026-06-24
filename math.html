@@ -1,0 +1,632 @@
+<!DOCTYPE html> 
+  <html lang="en">
+    <head>
+      <title> RTC Computer Page</title>
+         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="About Page Of Raquel Tuition center">
+        <meta name="keywords" content="Mathematics Page">
+        <meta name="author" content="Racheal Sakala">
+         <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#f4f7fb;
+    color:#333;
+    line-height:1.6;
+}
+
+          /* NAVIGATION */
+nav{
+    background:#0a66c2;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo h1{
+    font-size:1.8rem;
+    color: rgb(75, 206, 0);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo p{
+    font-size:0.8rem;
+    color:#dfefff;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav ul li{
+    position:relative;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+}
+
+nav ul li a:hover{
+    color:#ffdd57;
+}
+
+/* DROPDOWN */
+.dropdown-content{
+    display:none;
+    position:absolute;
+    top:30px;
+    left:0;
+    background:white;
+    min-width:180px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a{
+    color:#333;
+    display:block;
+    padding:12px;
+}
+
+.dropdown-content a:hover{
+    background:#f4f7fb;
+}
+
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+
+  /* the hero section css */
+  .hero{
+    height:85vh;
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url('boardmath.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    color:#ffdd57;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    padding:20px;
+}
+
+
+/* about mathematic section css */
+.about-math{
+    background:white;
+    text-align:center;
+    margin-top:  50px;
+    margin-bottom: 80px;
+}
+
+.about-math p{
+    max-width:900px;
+    margin:20px auto;
+    font-size:1.05rem;
+    line-height:1.8;
+}
+
+
+/* mathematics topic covered css */
+.topics{
+    background:#f4f7fb;
+    text-align:center;
+}
+
+.topics-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:25px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+.topic-card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.topic-card:hover{
+    transform:translateY(-8px);
+}
+
+.topic-card h3{
+    color:#0a66c2;
+    margin-bottom:15px;
+}
+
+/* why study mathematics  section css*/
+
+.why-math{
+    background:white;
+    text-align:center;
+}
+
+.why-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:25px;
+    margin-top:40px;
+    margin-bottom: 80px;
+}
+
+.why-card{
+    background:#f4f7fb;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.why-card:hover{
+    transform:translateY(-8px);
+}
+
+.why-card h3{
+    color:#0a66c2;
+    margin-bottom:15px;
+}
+
+ /* career opportunities section css */
+.career-section{
+    background:#f4f7fb;
+    text-align:center;
+}
+
+.career-intro{
+    max-width:800px;
+    margin:0 auto 40px;
+}
+
+.career-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    margin-top:40px;
+    margin-bottom: 80px;
+}
+
+.career-card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.career-card:hover{
+    transform:translateY(-8px);
+}
+
+.career-card h3{
+    color:#0a66c2;
+    margin-bottom:15px;
+}
+
+
+/* why choose rtc section css */
+.why-rtc{
+    background:white;
+    text-align:center;
+    margin-bottom: 20px;
+}
+
+.rtc-intro{
+    max-width:850px;
+    margin:0 auto 40px;
+}
+
+.rtc-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.rtc-card{
+    background:#f4f7fb;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.rtc-card:hover{
+    transform:translateY(-8px);
+}
+
+.rtc-card h3{
+    color:#0a66c2;
+    margin-bottom:15px;
+}
+
+
+
+ /* footer css */
+footer{
+    background:#0a66c2;
+    color:white;
+    padding:30px;
+    margin-top: 100px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.footer-container a{
+    color:white;
+    text-decoration:none;
+    display:block;
+    margin:5px 0;
+}
+
+.footer-bottom{
+    text-align:center;
+    margin-top:20px;
+    border-top:1px solid rgba(255,255,255,.3);
+    padding-top:10px;
+}
+          </style>
+
+       </head>
+        <body>
+        
+                      <!-- NAVIGATION -->
+            <nav>
+            <div class="logo">
+            <h1>Raquel Tuition Centre</h1>
+            <p>Empowering Students for Academic Excellence</p>
+            </div>
+
+            <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+
+            <li class="dropdown">
+            <a href="#">Subjects ▼</a>
+            <div class="dropdown-content">
+            <a href="computer.html">Computer Studies</a>
+            <a href="math.html">Mathematics</a>
+            </div>
+            </li>
+
+            <li><a href="contact.html">Contact</a></li>
+            </ul>
+            </nav>
+
+
+                <!-- HERO SECTION -->
+
+            <section class="hero">
+
+                <h1>Mathematics</h1>
+
+                <p>
+                    Develop strong analytical, logical, and problem-solving skills
+                    through Mathematics. Build a solid foundation for academic
+                    success and future career opportunities.
+                </p>
+
+</section>
+
+
+
+            <!-- ABOUT MATHEMATICS -->
+
+            <section class="about-math">
+
+                <h2>About Mathematics</h2>
+
+                <p>
+                    Mathematics is a fundamental subject that helps students develop
+                    logical reasoning, critical thinking, and problem-solving skills.
+                    It plays an important role in everyday life and serves as the
+                    foundation for many fields, including science, technology,
+                    engineering, and finance.
+                </p>
+
+                <p>
+                    At Raquel Tuition Centre, we provide quality Mathematics lessons
+                    that help students build confidence, improve academic performance,
+                    and develop a deeper understanding of mathematical concepts.
+                    Our teaching approach combines theory, practice, and real-world
+                    applications to make learning engaging and effective.
+                </p>
+
+            </section>
+
+
+            <!-- TOPICS COVERED -->
+
+                <section class="topics">
+
+                    <h2>Topics Covered</h2>
+
+                    <div class="topics-container">
+
+                        <div class="topic-card">
+                            <h3> Arithmetic</h3>
+                            <p>
+                                Learn basic mathematical operations including
+                                addition, subtraction, multiplication, and division.
+                            </p>
+                        </div>
+
+                        <div class="topic-card">
+                            <h3> Algebra</h3>
+                            <p>
+                                Understand equations, expressions, variables,
+                                and mathematical problem-solving techniques.
+                            </p>
+                        </div>
+
+                        <div class="topic-card">
+                            <h3> Geometry</h3>
+                            <p>
+                                Study shapes, angles, lines, measurements,
+                                and spatial reasoning.
+                            </p>
+                        </div>
+
+                        <div class="topic-card">
+                            <h3>Trigonometry</h3>
+                            <p>
+                                Explore relationships between angles and sides
+                                of triangles and their practical applications.
+                            </p>
+                        </div>
+
+                        <div class="topic-card">
+                            <h3>Statistics</h3>
+                            <p>
+                                Learn how to collect, organize, analyze,
+                                and interpret data effectively.
+                            </p>
+                        </div>
+
+                        <div class="topic-card">
+                            <h3>Calculus</h3>
+                            <p>
+                                Study rates of change, functions,
+                                limits, and advanced mathematical concepts.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                            <!-- WHY STUDY MATHEMATICS -->
+
+            <section class="why-math">
+
+                <h2>Why Study Mathematics?</h2>
+
+                <div class="why-container">
+
+                    <div class="why-card">
+                        <h3>Develop Logical Thinking</h3>
+                        <p>
+                            Mathematics trains the mind to think logically,
+                            analyze situations, and make informed decisions.
+                        </p>
+                    </div>
+
+                    <div class="why-card">
+                        <h3>Improve Problem-Solving Skills</h3>
+                        <p>
+                            Students learn how to identify problems,
+                            evaluate solutions, and apply mathematical reasoning.
+                        </p>
+                    </div>
+
+                    <div class="why-card">
+                        <h3>Support Other Subjects</h3>
+                        <p>
+                            Mathematics is essential for success in
+                            Science, Computer Studies, Engineering, and Economics.
+                        </p>
+                    </div>
+
+                    <div class="why-card">
+                        <h3> Open Career Opportunities</h3>
+                        <p>
+                            Strong mathematical skills are highly valued
+                            in many professions and industries worldwide.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+                                    <!-- CAREER OPPORTUNITIES -->
+
+                        <section class="career-section">
+
+                            <h2>Career Opportunities</h2>
+
+                            <p class="career-intro">
+                                Mathematics provides a strong foundation for many exciting and
+                                rewarding careers. Students who excel in Mathematics can pursue
+                                opportunities in science, technology, business, engineering,
+                                and finance.
+                            </p>
+
+                            <div class="career-container">
+
+                                <div class="career-card">
+                                    <h3>Engineer</h3>
+                                    <p>
+                                        Use mathematical principles to design and build
+                                        structures, machines, and systems.
+                                    </p>
+                                </div>
+
+                                <div class="career-card">
+                                    <h3>Accountant</h3>
+                                    <p>
+                                        Manage financial records, budgets,
+                                        and business transactions.
+                                    </p>
+                                </div>
+
+                                <div class="career-card">
+                                    <h3>Statistician</h3>
+                                    <p>
+                                        Collect, analyze, and interpret data
+                                        to support decision-making.
+                                    </p>
+                                </div>
+
+                                <div class="career-card">
+                                    <h3>Economist</h3>
+                                    <p>
+                                        Study economic trends and provide
+                                        insights for businesses and governments.
+                                    </p>
+                                </div>
+
+                                <div class="career-card">
+                                    <h3>Data Analyst</h3>
+                                    <p>
+                                        Analyze data and create reports
+                                        that help organizations make informed decisions.
+                                    </p>
+                                </div>
+
+                                <div class="career-card">
+                                    <h3>Architect</h3>
+                                    <p>
+                                        Design buildings and structures using
+                                        mathematical calculations and measurements.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </section>
+
+                          <!-- WHY CHOOSE RAQUEL TUITION CENTRE -->
+
+                        <section class="why-rtc">
+
+                            <h2>Why Choose Raquel Tuition Centre?</h2>
+
+                            <p class="rtc-intro">
+                                At Raquel Tuition Centre, we are committed to helping students
+                                achieve academic excellence through quality teaching,
+                                personalized support, and a positive learning environment.
+                            </p>
+
+                            <div class="rtc-container">
+
+                                <div class="rtc-card">
+                                    <h3>Experienced Tutors</h3>
+                                    <p>
+                                        Our tutors are dedicated professionals who guide
+                                        students through challenging mathematical concepts
+                                        with patience and expertise.
+                                    </p>
+                                </div>
+
+                                <div class="rtc-card">
+                                    <h3>Personalized Learning</h3>
+                                    <p>
+                                        We recognize that every student learns differently,
+                                        so we provide individual attention and tailored support.
+                                    </p>
+                                </div>
+
+                                <div class="rtc-card">
+                                    <h3>Exam Preparation</h3>
+                                    <p>
+                                        We help students prepare effectively for school,
+                                        mock, and national examinations through practice
+                                        exercises and revision sessions.
+                                    </p>
+                                </div>
+
+                                <div class="rtc-card">
+                                    <h3>Proven Results</h3>
+                                    <p>
+                                        Our goal is to help students improve their confidence,
+                                        understanding, and academic performance in Mathematics.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                                <!-- FOOTER -->
+         <footer>
+
+             <div class="footer-container">
+
+                <div>
+                    <h3>Raquel Tuition Centre</h3>
+                    <p>Empowering Students for Academic Excellence.</p>
+                    </div>
+
+                       <div>
+                          <h3>Quick Links</h3>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="computer.html">Computer Studies</a>
+                    <a href="math.html">Mathematics</a>
+                    <a href="contact.html">Contact</a>
+              </div>
+
+         <div>
+         <h3>Contact</h3>
+            <p>Email: info@raqueltuition.com</p>
+             <p>Phone: +260 97 6480341</p>
+                <p>Lusaka, Zambia</p>
+         </div>
+              </div>
+                    <div class="footer-bottom">
+                 <p>&copy; 2026 Raquel Tuition Centre | Created by Racheal Sakala</p>
+                 </div>
+             </footer>
+
+
+
+
+        </body>
+         </html>

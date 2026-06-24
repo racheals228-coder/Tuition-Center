@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="About Page Of Raquel Tuition center">
+        <meta name="keywords" content="Mathematics Page">
+        <meta name="author" content="Racheal Sakala">
+<title>Contact Us Page</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#f4f7fb;
+    color:#333;
+    line-height:1.6;
+}
+
+  /* NAVIGATION */
+nav{
+    background:#0a66c2;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+.logo h1{
+    font-size:1.8rem;
+    color: rgb(75, 206, 0);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo p{
+    font-size:0.8rem;
+    color:#dfefff;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav ul li{
+    position:relative;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+}
+
+nav ul li a:hover{
+    color:#ffdd57;
+}
+
+/* DROPDOWN */
+.dropdown-content{
+    display:none;
+    position:absolute;
+    top:30px;
+    left:0;
+    background:white;
+    min-width:180px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a{
+    color:#333;
+    display:block;
+    padding:12px;
+}
+
+.dropdown-content a:hover{
+    background:#f4f7fb;
+}
+
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+
+/* hero section css */
+
+.hero{
+    height:85vh;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url('contact.jpg');
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    color: orange;
+
+    padding:20px;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:700px;
+    font-size:1.2rem;
+    line-height:1.8;
+}
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+}
+
+/* contact info section css */
+
+.contact-info{
+    padding:80px 10%;
+    background:white;
+    text-align:center;
+}
+.contact-info h2{
+   color: green;
+   font-size: 2rem;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.contact-card{
+    background:#f4f7fb;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.contact-card h3{
+    color:#0a66c2;
+    margin-bottom:15px;
+}
+
+
+.contact-form-section{
+    padding:80px 10%;
+    background:#f4f7fb;
+    text-align:center;
+}
+
+.contact-form-section h2{
+    font-size:2rem;
+    color: green;
+    margin-bottom:30px;
+}
+
+.contact-form{
+    max-width:700px;
+    margin:0 auto;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    text-align:left;
+}
+
+/* form section css */
+.form-group{
+    margin-bottom:20px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+    color:#333;
+}
+
+.form-group input,
+.form-group textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    outline:none;
+    font-size:1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+    border-color:#0a66c2;
+}
+
+button{
+    background:#0a66c2;
+    color:white;
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:1rem;
+    width:100%;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#084a8a;
+}
+
+
+/* FOOTER */
+footer{
+    background:#0a66c2;
+    color:white;
+    padding:30px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.footer-container a{
+    color:white;
+    text-decoration:none;
+    display:block;
+    margin:5px 0;
+}
+
+.footer-bottom{
+    text-align:center;
+    margin-top:20px;
+    border-top:1px solid rgba(255,255,255,.3);
+    padding-top:10px;
+}
+
+  </style>
+   </head>
+    <body>
+      
+                <!-- NAVIGATION -->
+          <nav>
+          <div class="logo">
+          <h1>Raquel Tuition Centre</h1>
+          <p>Empowering Students for Academic Excellence</p>
+          </div>
+
+          <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+
+          <li class="dropdown">
+          <a href="#">Subjects ▼</a>
+          <div class="dropdown-content">
+          <a href="computer.html">Computer Studies</a>
+          <a href="math.html">Mathematics</a>
+          </div>
+          </li>
+
+          <li><a href="contact.html">Contact</a></li>
+          </ul>
+          </nav>
+
+                <!-- contact hero section -->
+                        <section class="hero">
+
+                  <h1>Contact Us</h1>
+
+                  <p>
+                      We'd love to hear from you. Get in touch with us for
+                      inquiries, enrollment information, or academic support.
+                  </p>
+                  </section>
+
+                  <section class="contact-info">
+
+              <h2>Get In Touch</h2>
+
+              <div class="contact-container">
+
+                  <div class="contact-card">
+                      <h3> Address</h3>
+                      <p>Lusaka, Zambia</p>
+                  </div>
+
+                  <div class="contact-card">
+                      <h3> Phone</h3>
+                      <p>+260 XXX XXX XXX</p>
+                  </div>
+
+                  <div class="contact-card">
+                      <h3>Email</h3>
+                      <p>info@raqueltuitioncentre.com</p>
+                  </div>
+
+                  <div class="contact-card">
+                      <h3>Working Hours</h3>
+                      <p>Monday - Saturday<br>08:00 AM - 05:00 PM</p>
+                  </div>
+
+              </div>
+          </section>
+
+                      <!-- CONTACT FORM SECTION -->
+            <section class="contact-form-section">
+
+                <h2>Send Us a Message</h2>
+
+                 <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                     <input type="hidden" name="access_key" value="44baec70-c9da-4049-8359-6ab2456a861d">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" name="name" id="name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email"  name="email" id="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" name="subject" id="subject" placeholder="Enter subject">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
+                    </div>
+
+                    <button type="submit">Send Message</button>
+
+                </form>
+
+            </section>
+
+                            
+                <!-- FOOTER -->
+                <footer>
+
+                <div class="footer-container">
+
+                <div>
+                <h3>Raquel Tuition Centre</h3>
+                <p>Empowering Students for Academic Excellence.</p>
+                </div>
+
+                <div>
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="computer.html">Computer Studies</a>
+                <a href="math.html">Mathematics</a>
+                <a href="contact.html">Contact</a>
+                </div>
+
+                <div>
+                <h3>Contact</h3>
+                <p>Email: info@raqueltuition.com</p>
+                <p>Phone: +260 97 6480341</p>
+                <p>Lusaka, Zambia</p>
+                </div>
+
+                </div>
+
+                <div class="footer-bottom">
+                <p>&copy; 2026 Raquel Tuition Centre | Created by Racheal Sakala</p>
+                </div>
+                </footer>
+
+    </body>
+    </html>

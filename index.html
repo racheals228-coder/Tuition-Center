@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="About Page Of Raquel Tuition center">
+        <meta name="keywords" content="Mathematics Page">
+        <meta name="author" content="Racheal Sakala">
+<title>Raquel Tuition Centre</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#f4f7fb;
+    color:#333;
+    line-height:1.6;
+}
+
+/* NAVIGATION */
+nav{
+    background:#0a66c2;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo h1{
+    font-size:1.8rem;
+    color: rgb(75, 206, 0);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo p{
+    font-size:0.8rem;
+    color:#dfefff;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav ul li{
+    position:relative;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+}
+
+nav ul li a:hover{
+    color:#ffdd57;
+}
+
+/* DROPDOWN */
+.dropdown-content{
+    display:none;
+    position:absolute;
+    top:30px;
+    left:0;
+    background:white;
+    min-width:180px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a{
+    color:#333;
+    display:block;
+    padding:12px;
+}
+
+.dropdown-content a:hover{
+    background:#f4f7fb;
+}
+
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+
+/* HERO */
+.hero{
+    height:85vh;
+    background: linear-gradient(rgba(10,102,194,.75),
+    rgba(10,102,194,.75)),
+     url('teacher.webp');
+    background-size:cover;
+    background-position:center;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h2{
+    font-size:4rem;
+    margin-bottom:15px;
+    color: orange;
+}
+
+.hero p{
+    max-width:700px;
+    font-size:1.2rem;
+}
+
+.btn{
+    margin-top:20px;
+    padding:12px 25px;
+    background:#ffdd57;
+    border:none;
+    border-radius:5px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:#ffc107;
+}
+
+/* SECTIONS */
+section{
+    padding:70px 10%;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#0a66c2;
+}
+
+/* ABOUT */
+.about{
+    text-align:center;
+}
+
+/* SUBJECTS */
+.subject-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+    text-align:center;
+}
+
+/* WHY US */
+.features ul{
+    max-width:600px;
+    margin:auto;
+}
+
+.features li{
+    margin:12px 0;
+}
+
+/* STATS */
+.stats{
+    background:#0a66c2;
+    color:white;
+}
+
+.stats-container{
+    display:flex;
+    justify-content:center;
+    gap:60px;
+    flex-wrap:wrap;
+    text-align:center;
+}
+
+.stats-container h3{
+    font-size:2rem;
+}
+
+/* TESTIMONIALS */
+.testimonial{
+    background:white;
+    padding:20px;
+    margin:15px auto;
+    max-width:700px;
+    border-left:5px solid #0a66c2;
+}
+
+/* COMMENTS */
+.comments form{
+    max-width:700px;
+    margin:auto;
+}
+
+.comments input,
+.comments textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.comment-box{
+    background:white;
+    padding:15px;
+    margin:10px auto;
+    max-width:700px;
+    border-left:4px solid #0a66c2;
+}
+
+/* GALLERY */
+.slideshow-container{
+    width:100%;
+    max-width:900px;
+    margin:auto;
+    position:relative;
+}
+
+.slide{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    border-radius:10px;
+    display:none;
+}
+
+.slide.active{
+    display:block;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+/* ANNOUNCEMENTS */
+.announcement{
+    background:white;
+    padding:15px;
+    margin:10px auto;
+    max-width:800px;
+    border-left:4px solid #ffdd57;
+}
+
+/* CTA */
+.cta{
+    background:#0a66c2;
+    color:white;
+    text-align:center;
+}
+
+/* CONTACT */
+.contact-preview{
+    text-align:center;
+}
+
+.contact-preview p{
+    margin:10px 0;
+}
+.contact-preview button{
+    background-color: green;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+}
+.contact-preview a{
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif, Courier, monospace;
+    font-weight: bold;
+}
+.contact-preview button:hover{
+    opacity: 0.7;
+    cursor: pointer;
+    transform: translateY(-2px);
+    }
+
+
+/* FOOTER */
+footer{
+    background:#0a66c2;
+    color:white;
+    padding:30px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.footer-container a{
+    color:white;
+    text-decoration:none;
+    display:block;
+    margin:5px 0;
+}
+
+.footer-bottom{
+    text-align:center;
+    margin-top:20px;
+    border-top:1px solid rgba(255,255,255,.3);
+    padding-top:10px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+nav ul{
+    flex-direction:column;
+    margin-top:10px;
+}
+
+.hero h2{
+    font-size:2rem;
+}
+
+.stats-container{
+    flex-direction:column;
+}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+<div class="logo">
+<h1>Raquel Tuition Centre</h1>
+<p>Empowering Students for Academic Excellence</p>
+</div>
+
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+
+<li class="dropdown">
+<a href="#">Subjects ▼</a>
+<div class="dropdown-content">
+<a href="computer.html">Computer Studies</a>
+<a href="math.html">Mathematics</a>
+</div>
+</li>
+
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<h2>Welcome to Raquel Tuition Centre</h2>
+
+<p>
+Providing quality tutoring services that help students build
+confidence, improve performance, and achieve academic success.
+</p>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+<h2>About Us</h2>
+
+<p>
+Raquel Tuition Centre is dedicated to helping students excel in their
+studies through quality teaching, personalized support, and an
+interactive learning environment.
+</p>
+</section>
+
+<!-- SUBJECTS -->
+<section>
+<h2>Subjects Offered</h2>
+
+<div class="subject-grid">
+
+<div class="card">
+<h3>💻 Computer Studies</h3>
+<p>
+Learn programming, web development, databases,
+and computer fundamentals.
+</p>
+</div>
+
+<div class="card">
+<h3>📚 Mathematics</h3>
+<p>
+Master algebra, geometry, trigonometry,
+and problem-solving techniques.
+</p>
+</div>
+
+</div>
+</section>
+
+<!-- WHY US -->
+<section class="features">
+<h2>Why Choose Us?</h2>
+
+<ul>
+<li>✔ Qualified Tutors</li>
+<li>✔ Interactive Learning Environment</li>
+<li>✔ Affordable Tuition Fees</li>
+<li>✔ Exam Preparation Support</li>
+<li>✔ Personalized Student Guidance</li>
+</ul>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+<h2 style="color:white;">Our Achievements</h2>
+
+<div class="stats-container">
+
+<div>
+<h3>200+</h3>
+<p>Students Supported</p>
+</div>
+
+<div>
+<h3>95%</h3>
+<p>Pass Rate</p>
+</div>
+
+<div>
+<h3>5+</h3>
+<p>Years of Excellence</p>
+</div>
+
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+<h2>Student Testimonials</h2>
+
+<div class="testimonial">
+"The Mathematics lessons helped me improve my grades significantly."
+<br><strong>- Student</strong>
+</div>
+
+<div class="testimonial">
+"Computer Studies became much easier after joining the centre."
+<br><strong>- Student</strong>
+</div>
+</section>
+
+
+<div class="comment-box">
+<strong>Mary:</strong>
+<p>The lessons are very engaging and easy to understand.</p>
+</div>
+
+<div class="comment-box">
+<strong>John:</strong>
+<p>I have improved greatly in Mathematics.</p>
+</div>
+
+</section>
+
+<!-- GALLERY -->
+<section>
+    <h2>Gallery</h2>
+
+    <div class="slideshow-container">
+
+        <img class="slide active" src="student1.jpg" alt="African students learning">
+
+        <img class="slide" src="student2.jpg" alt="African students learning">
+
+        <img class="slide" src="student3.jpg" alt="African students learning">
+
+        <img class="slide" src="student4.jpg" alt="African students learning">
+
+    </div>
+</section>
+
+<!-- ANNOUNCEMENTS -->
+<section>
+<h2>Latest Announcements</h2>
+
+<div class="announcement">
+📢 Registration for the next intake is now open.
+</div>
+
+<div class="announcement">
+📢 New Computer Studies classes begin next month.
+</div>
+
+<div class="announcement">
+📢 Weekend revision classes available.
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+<h2 style="color:white;">Ready to Improve Your Grades?</h2>
+
+<p>
+Join Raquel Tuition Centre today and start your journey
+toward academic excellence.
+</p>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-preview">
+<h2>Contact Us</h2>
+
+<p>📧 info@raqueltuition.com</p>
+<p>📞 +260 97 6480341</p>
+<p>📍 Lusaka, Zambia</p>
+<button><a href="contact.html">Contact Us</a></button>
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+<div class="footer-container">
+
+<div>
+<h3>Raquel Tuition Centre</h3>
+<p>Empowering Students for Academic Excellence.</p>
+</div>
+
+<div>
+<h3>Quick Links</h3>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="computer.html">Computer Studies</a>
+<a href="math.html">Mathematics</a>
+<a href="contact.html">Contact</a>
+</div>
+
+<div>
+<h3>Contact</h3>
+<p>Email: info@raqueltuition.com</p>
+<p>Phone: +260 97 6480341</p>
+<p>Lusaka, Zambia</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+<p>&copy; 2026 Raquel Tuition Centre | Created by Racheal Sakala</p>
+</div>
+</footer>
+
+
+
+
+
+</body>
+</html>

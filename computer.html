@@ -1,0 +1,534 @@
+<!DOCTYPE html> 
+  <html lang="en">
+    <head>
+      <title> RTC Computer Page</title>
+         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="About Page Of Raquel Tuition center">
+        <meta name="keywords" content="About Page">
+        <meta name="author" content="Racheal Sakala">
+         <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#f4f7fb;
+    color:#333;
+    line-height:1.6;
+}
+
+/* NAVIGATION */
+
+nav{
+    background:#0a66c2;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+.logo h1{
+    font-size:1.8rem;
+    color: rgb(75, 206, 0);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo p{
+    font-size:0.8rem;
+    color:#dfefff;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+nav ul li{
+    position:relative;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+}
+
+nav ul li a:hover{
+    color:#ffdd57;
+}
+
+/* DROPDOWN */
+
+.dropdown-content{
+    display:none;
+    position:absolute;
+    top:30px;
+    left:0;
+    background:white;
+    min-width:180px;
+    box-shadow:0 4px 10px rgba(0,0,0,.2);
+}
+
+.dropdown-content a{
+    color:#333;
+    display:block;
+    padding:12px;
+}
+
+.dropdown-content a:hover{
+    background:#f4f7fb;
+}
+
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+
+/* HERO SECTION */
+
+.hero{
+    height:85vh;
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url('StudentCoding.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    color: orange;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:700px;
+    font-size:1.2rem;
+}
+
+.btn{
+    margin-top:20px;
+    padding:12px 25px;
+    background:#ffdd57;
+    border:none;
+    border-radius:5px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:#ffc107;
+}
+
+/* SECTIONS */
+
+section{
+    padding:70px 10%;
+}
+
+section h2{
+    text-align:center;
+    color:#0a66c2;
+    margin-bottom:25px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+nav ul{
+    flex-direction:column;
+    margin-top:10px;
+}
+
+.hero h1{
+    font-size:2.5rem;
+}
+}
+
+/* this section will contain what the student will be learnig css*/
+   .learn{
+    background:white;
+}
+
+.learn-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.learn-card{
+    background: rgb(218, 206, 206);
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.learn-card:hover{
+    transform:translateY(-10px);
+}
+.learn h2{
+    color: orange;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 30px;
+}
+
+.learn-card h3{
+    color: tomato;
+    margin-bottom:15px;
+}
+
+
+/* why study computer studies section css*/ 
+  .why-computer h2{
+    color: orange;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+    .why-content{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.why-text{
+    flex:1;
+    min-width:300px;
+}
+
+.why-image{
+    flex:1;
+    min-width:300px;
+}
+
+.why-image img{
+    width:100%;
+    border-radius:10px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+}
+
+/*  career opportunities section css */
+   /* CAREER OPPORTUNITIES */
+
+.career-section{
+    padding:80px 10%;
+    background:#f4f7fb;
+    text-align:center;
+    margin-bottom: 100px;
+}
+
+.career-section h2{
+    color: orange;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.career-text{
+    max-width:800px;
+    margin:0 auto 40px;
+}
+
+.career-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.career-card{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.career-card:hover{
+    transform:translateY(-8px);
+}
+
+.career-card h3{
+    color: green;
+    margin-bottom:15px;
+} 
+
+
+/* FOOTER */
+footer{
+    background:#0a66c2;
+    color:white;
+    padding:30px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.footer-container a{
+    color:white;
+    text-decoration:none;
+    display:block;
+    margin:5px 0;
+}
+
+.footer-bottom{
+    text-align:center;
+    margin-top:20px;
+    border-top:1px solid rgba(255,255,255,.3);
+    padding-top:10px;
+}
+
+</style>
+    </head>
+     <body>
+
+                              <!-- NAVIGATION -->
+                      <nav>
+                      <div class="logo">
+                      <h1>Raquel Tuition Centre</h1>
+                      <p>Empowering Students for Academic Excellence</p>
+                      </div>
+
+                      <ul>
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="about.html">About</a></li>
+
+                      <li class="dropdown">
+                      <a href="#">Subjects ▼</a>
+                      <div class="dropdown-content">
+                      <a href="computer.html">Computer Studies</a>
+                      <a href="math.html">Mathematics</a>
+                      </div>
+                      </li>
+
+                      <li><a href="contact.html">Contact</a></li>
+                      </ul>
+                      </nav>
+
+
+                          <!-- HERO SECTION -->
+
+                      <section class="hero">
+
+                      <h1>Computer Studies</h1>
+
+                      <p>
+                      Develop practical technology skills through computing,
+                      programming, web development, databases, and digital literacy.
+                      Prepare for the future in a technology-driven world.
+                      </p>
+                      </section
+
+                         
+  <!-- section shows what that students will be learning about -->
+                <section class="learn">
+
+                    <h2>What You'll Learn</h2>
+
+                    <div class="learn-container">
+
+                        <div class="learn-card">
+                            <h3>Computer Fundamentals</h3>
+                            <p>
+                                Learn the basic components of computers,
+                                including hardware, software, operating systems,
+                                and computer maintenance.
+                            </p>
+                        </div>
+
+                        <div class="learn-card">
+                            <h3>Programming</h3>
+                            <p>
+                                Understand coding principles and learn how
+                                programs are created to solve real-world problems.
+                            </p>
+                        </div>
+
+                        <div class="learn-card">
+                            <h3>Web Development</h3>
+                            <p>
+                                Build modern websites using HTML, CSS,
+                                and JavaScript.
+                            </p>
+                        </div>
+
+                        <div class="learn-card">
+                            <h3>Database Systems</h3>
+                            <p>
+                                Learn how information is stored, managed,
+                                and retrieved using database technologies.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                  <!-- section will disclose why it is very important to learn computer studies -->
+
+                                <section class="why-computer">
+
+                    <h2>Why Study Computer Studies?</h2>
+
+                    <div class="why-content">
+
+                        <div class="why-text">
+                            <p>
+                                Technology is transforming every industry.
+                                Computer Studies provides students with practical
+                                digital skills that are valuable in education,
+                                business, entrepreneurship, and employment.
+                            </p>
+
+                            <p>
+                                Students gain confidence in using computers,
+                                solving problems, and creating digital solutions
+                                for modern challenges.
+                            </p>
+                        </div>
+
+                        <div class="why-image">
+                            <img src="teacher.webp" alt="teacher teaching coding">
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- CAREER OPPORTUNITIES -->
+
+<section class="career-section">
+
+    <h2>Career Opportunities</h2>
+
+    <p class="career-text">
+        Computer Studies equips students with valuable digital skills
+        that can lead to rewarding careers in the technology industry.
+        Some of the exciting career paths include:
+    </p>
+
+    <div class="career-grid">
+
+        <div class="career-card">
+            <h3>Software Developer</h3>
+            <p>
+                Design and develop software applications,
+                mobile apps, and computer systems.
+            </p>
+        </div>
+
+        <div class="career-card">
+            <h3>Web Developer</h3>
+            <p>
+                Create modern websites and web applications
+                for businesses and organizations.
+            </p>
+        </div>
+
+        <div class="career-card">
+            <h3>Database Administrator</h3>
+            <p>
+                Manage, organize, and secure data
+                for companies and institutions.
+            </p>
+        </div>
+
+        <div class="career-card">
+            <h3>Cybersecurity Analyst</h3>
+            <p>
+                Protect computer systems and networks
+                from cyber threats and attacks.
+            </p>
+        </div>
+
+        <div class="career-card">
+            <h3>Network Engineer</h3>
+            <p>
+                Design and maintain communication
+                networks for businesses.
+            </p>
+        </div>
+
+        <div class="career-card">
+            <h3>IT Support Specialist</h3>
+            <p>
+                Help users solve technical problems
+                and maintain computer systems.
+            </p>
+        </div>
+
+    </div>
+                 </section> 
+
+                                    <!-- FOOTER -->
+                    <footer>
+                        <div class="footer-container">
+
+                         <div>
+                         <h3>Raquel Tuition Centre</h3>
+                    <p>Empowering Students for Academic Excellence.</p>
+                          </div>
+
+                     <div>
+                       <h3>Quick Links</h3>
+                        <a href="index.html">Home</a>
+                         <a href="about.html">About</a>
+                         <a href="computer.html">Computer Studies</a>
+                        <a href="math.html">Mathematics</a>
+                         <a href="contact.html">Contact</a>
+                    </div>
+
+                    <div>
+                       <h3>Contact</h3>
+                         <p>Email: info@raqueltuition.com</p>
+                        <p>Phone: +260 97 6480341</p>
+                       <p>Lusaka, Zambia</p>
+                    </div>
+
+                    </div>
+
+                    <div class="footer-bottom">
+                       <p>&copy; 2026 Raquel Tuition Centre | Created by Racheal Sakala</p>
+                    </div>
+                </footer>
+
+
+    
+     </body>
+  </html>
